@@ -50,7 +50,8 @@ def draw_particles(screen, r1, r2):
     pygame.draw.circle(screen, (255, 0, 0), r1.astype(int), 10)
     pygame.draw.circle(screen, (0, 0, 255), r2.astype(int), 10)
 
-def draw_info_table(screen, m1, m2, distance, F12_new):#
+def draw_info_table(screen, m1, m2, distance, F12_new):
+    font = pygame.font.SysFont(None, 24)
     table_x = WIDTH - 200
     table_y = 10
     line_height = 20
