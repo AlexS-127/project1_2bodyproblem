@@ -6,7 +6,7 @@ pygame.init()
 # Screen dimensions
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("2 Particle Gravity Simulation")
+pygame.display.set_caption("project1_2bodyproblem")
 
 # Constants
 G = 100
@@ -50,9 +50,7 @@ def draw_particles(screen, r1, r2):
     pygame.draw.circle(screen, (255, 0, 0), r1.astype(int), 10)
     pygame.draw.circle(screen, (0, 0, 255), r2.astype(int), 10)
 
-def draw_info_table(screen, m1, m2, distance, F12_new):
-    """Draw the information table with numerical values in the top right corner."""
-    font = pygame.font.SysFont(None, 24)
+def draw_info_table(screen, m1, m2, distance, F12_new):#
     table_x = WIDTH - 200
     table_y = 10
     line_height = 20
@@ -70,10 +68,8 @@ def draw_info_table(screen, m1, m2, distance, F12_new):
 def main():
     clock = pygame.time.Clock()
     
-    # Initialize particles and velocities
     r1, r2, v1, v2 = initialize_particles()
     
-    # Compute initial forces and accelerations
     grav_force, distance = compute_force(r1, r2, m1, m2)
     a1 = grav_force / m1
     a2 = -grav_force / m2
@@ -81,26 +77,20 @@ def main():
 
     running = True
     while running:
-        clock.tick(300)  # Limit the frame rate to 60 FPS
+        clock.tick(300)
 
-        # Event handling
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-
-        # Update positions and velocities
+#
         r1, r2, v1, v2, a1, a2, distance, F12_new = update_positions_velocities(r1, r2, v1, v2, a1, a2, dt)
-
-        # Draw everything
+#
         draw_particles(screen, r1, r2)
         draw_info_table(screen, m1, m2, distance, F12_new)
 
-        # Update the display
         pygame.display.flip()
-
-    # Quit Pygame
+#
     pygame.quit()
 
-# Run the simulation
 if __name__ == "__main__":
     main()
