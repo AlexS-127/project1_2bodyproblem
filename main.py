@@ -83,14 +83,14 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-#
+
         r1, r2, v1, v2, a1, a2, distance, F12_new = update_positions_velocities(r1, r2, v1, v2, a1, a2, dt)
-#
+
         draw_particles(screen, r1, r2)
         draw_info_table(screen, m1, m2, distance, F12_new)
 
         pygame.display.flip()
-#
+
     pygame.quit()
 
 if __name__ == "__main__":
