@@ -10,13 +10,13 @@ For the first project I wanted to do something simple. I figured that a precurso
 
 ## Demo
 
-![Simulation GIF](two_body_simulation.gif)
+![two_body_simulation](https://github.com/user-attachments/assets/0e7cc0e5-ebba-4bc8-92d3-028ae3420b36)
 
 *Figure: Two particles in orbit.*
 
 ## Maths overview
-![Notebook Photo](notebook1.jpg)
-![Notebook Photo](notebook2.jpg)
+![notebook1](https://github.com/user-attachments/assets/30059627-0fde-4b4c-a0f1-a9ae34761dcd)
+![notebook2](https://github.com/user-attachments/assets/61a356f4-f871-4499-9b08-b6282b8cbde2)
 
 ## Contact
 
